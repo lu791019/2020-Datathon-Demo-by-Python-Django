@@ -1,0 +1,88 @@
+
+{% extends "layouts/base.html" %}
+
+{% block title %} 天能，我也能 {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">天能，我也能</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <h5>行銷你的新玩意</h5>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <form action="/" method="post">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="Commodity">新玩意的名字</label>
+                                                <input type="value" class="form-control" id="Commodity" name="Commodity" placeholder="Commodity Name">
+                                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Weather">天氣</label>
+                                                <select name="Weather" id="Weather">
+                                                    <option value="hot_day">熱天</option>
+                                                    <option value="rainy_day">雨天</option>
+                                                    <option value="good_day">好天</option>
+                                                </select>
+{#                                                <input type="value" class="form-control" id="Weather" name="Weather" placeholder="Weather">#}
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <h5>行銷你的新玩意 - 世界充滿惡意</h5>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <form action="/demo" method="post">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="Commodity">新玩意的名字</label>
+                                                <input type="value" class="form-control" id="Commodity" name="Commodity" placeholder="Commodity Name">
+                                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Weather">天氣</label>
+                                                <select name="Weather" id="Weather">
+                                                    <option value="rainy_day">雨天</option>
+                                                    <option value="good_day">好天</option>
+                                                </select>
+{#                                                <input type="value" class="form-control" id="Weather" name="Weather" placeholder="Weather">#}
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
